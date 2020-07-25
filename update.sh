@@ -12,5 +12,5 @@ sudo rm -r $(echo "$d")/polybar/*.jpg
 sudo rm -r $(echo "$d")/lightdm/*.jpg
 
 git add .
-git commit -m "actualitzant..."
+git commit -m "Actualitació des de update.sh"
 git push origin master
