@@ -2,7 +2,8 @@
 	base00: #263238;
 	base01: #2E3C43;
 	base02: #314549;
-	base03: #546E7A;
+	/*base03: #546E7A;*/
+	base03: #382f26;
 	base04: #B2CCD6;
 	base05: #EEFFFF;
 	base06: #EEFFFF;
@@ -12,8 +13,11 @@
 	base0A: #FFCB6B;
 	base0B: #C3E88D;
 	base0C: #89DDFF;
-	base0D: #82AAFF;
-	base0E: #C792EA;
+	/*base0D: #82AAFF;*/
+	base0E: #a67f1c;
+	/*base0D: #C792EA;*/
+	/*base0D: #a6a11c;*/
+	base0D: #ffb52a;
 	base0F: #FF5370;
 
 	/*base0D: #00BCD4;*/
@@ -26,15 +30,16 @@
 
 window {
 	transparency: "real";
-	fullscreen: true;
-	background-color: #263238e0; /*base00 + CC (80% opacity)*/
+	/*fullscreen: true;*/
+	/*background-color: #263238e0; base00 + CC (80% opacity)*/
+	background-color: #382f26e0;
 }
 
 mainbox {
 	/*children: [inputbar, message,  listview];*/
 	children: [inputbar, message,  listview];
 	spacing: 30px;
-	margin: 20%;
+/*	margin: 20%;*/
 	padding: 30px 0;
 	border: 1px;
 	border-color: @base0D;
@@ -76,7 +81,7 @@ button, textbox {
 }
 
 button selected {
-	background-color: @base0D;
+	background-color: @base0E;
 }
 
 listview {
@@ -88,7 +93,7 @@ scrollbar {
 	background-color: @base03;
 	handle-color: @base0D;
 	handle-width: 10px;
-	border: 0 1px;
+	border: 0 0px;
 	border-color: @base0D;
 	margin: 0 0 0 20px;
 }
@@ -103,7 +108,8 @@ element normal {
 }
 
 element selected {
-	background-color: @base0D;
+	/*background-color: @base0E;*/
+	background-color: #bf7500;
 }
 
 element alternate {
