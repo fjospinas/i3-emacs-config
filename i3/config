@@ -123,6 +123,9 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+# per bloquejar sa pantalla
+bindsym $mod+mod1+l exec dm-tool lock
+
 # focus the child container
 #bindsym $mod+d focus child
 
@@ -250,6 +253,7 @@ exec_always feh --bg-fill /home/gerry/.config/i3/tardor.jpg
 exec_always compton
 exec_always dunst
 exec_always nm-applet
+exec_always redshift-gtk
 
 for_window [class="^.*"] border pixel 2
 new_window 1pixel
