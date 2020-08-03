@@ -46,8 +46,8 @@ bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && $
 #bindsym XF86AudioMicMute exec amixer sset 'Master' toggle && pkill -RTMIN+10 i3blocks
 
 # brillantor
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 3%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +3%
 
 # captura
 bindsym Print exec spectacle
@@ -248,12 +248,12 @@ bar {
 bindsym $mod+c exec /home/gerry/.config/i3/webcam.sh
 
 exec_always setxkbmap -layout es
-exec_always feh --bg-fill /home/gerry/.config/i3/tardor.jpg
+exec_always feh --bg-fill "/home/gerry/.config/i3/cala ratjada.jpg"
 #exec_always /home/gerry/.config/i3/polybar.sh
 exec_always compton
 exec_always dunst
 exec_always nm-applet
-exec_always redshift-gtk
+#exec redshift-gtk
 
 for_window [class="^.*"] border pixel 2
 new_window 1pixel
