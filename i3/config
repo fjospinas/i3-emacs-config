@@ -245,15 +245,17 @@ bar {
 	}
 }
 
+client.focused #bf7500 #bf7500 #bf7500 #ffe570
+
 bindsym $mod+c exec /home/gerry/.config/i3/webcam.sh
 
 exec_always setxkbmap -layout es
-exec_always feh --bg-fill "/home/gerry/.config/i3/cala ratjada.jpg"
+exec feh --bg-fill "/home/gerry/.config/i3/cala ratjada.jpg"
 #exec_always /home/gerry/.config/i3/polybar.sh
-exec_always compton
-exec_always dunst
-exec_always nm-applet
+#exec_always compton
+exec dunst
+#exec_always nm-applet
 #exec redshift-gtk
 
 for_window [class="^.*"] border pixel 2
-new_window 1pixel
+new_window pixel 2
