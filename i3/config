@@ -181,16 +181,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym j resize shrink width 3 px or 3 ppt
+        bindsym k resize grow height 3 px or 3 ppt
+        bindsym l resize shrink height 3 px or 3 ppt
+        bindsym semicolon resize grow width 3 px or 3 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 3 px or 3 ppt
+        bindsym Down resize grow height 3 px or 3 ppt
+        bindsym Up resize shrink height 3 px or 3 ppt
+        bindsym Right resize grow width 3 px or 3 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -214,7 +214,7 @@ bindsym $mod+r mode "resize"
 #ara posam es gaps de sa pantalla
 gaps inner 9
 gaps outer 10
-#smart_borders on
+smart_borders on
 #
 bindsym $mod+Shift+a gaps inner all minus 1; gaps outer all minus 3;
 bindsym $mod+Shift+g gaps inner all plus 1; gaps outer all plus 3;
@@ -248,6 +248,7 @@ bar {
 client.focused #bf7500 #bf7500 #bf7500 #ffe570
 
 bindsym $mod+c exec /home/gerry/.config/i3/webcam.sh
+bindsym --release Caps_Lock exec pkill -SIGRTMIN+2 i3blocks
 
 exec_always setxkbmap -layout es
 exec feh --bg-fill "/home/gerry/.config/i3/cala ratjada.jpg"

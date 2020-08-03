@@ -42,6 +42,15 @@ markup=pango
 color=#1ED760
 border=#1ED760
 
+[caps]
+command=/home/gerry/.config/i3blocks/caps.sh
+interval=once
+color=#ffffff
+background=#9f5500
+align=center
+min_width=80
+signal=2
+
 [cpu]
 command=/home/gerry/.config/i3blocks/cpu
 interval=persist
