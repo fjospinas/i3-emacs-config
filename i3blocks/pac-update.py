@@ -93,8 +93,7 @@ def get_aur_updates():
         return []
 
     aur_updates = [line.split(' ')[0]
-                   for line in output.split('\n')
-                   if line.startswith('aur/')]
+                   for line in output.split('\n') if not line.split(' ')[0] == ""]
 
     return aur_updates
 
@@ -114,8 +113,10 @@ message = "{0}<span color='{1}'>{2}</span>"
 args = create_argparse()
 
 updates = get_updates()
+aur = []
 if args.aur:
-    updates += get_aur_updates()
+    aur = get_aur_updates()
+    updates += aur
 
 update_count = len(updates)
 if update_count > 0:
@@ -125,8 +126,9 @@ if update_count > 0:
     else:
       info = str(update_count)
       short_info = str(update_count)
-
-    matches = matching_updates(updates, args.watch)
+    
+    matches = ["AUR"] if aur else []
+    matches += matching_updates(updates, args.watch)
     if matches:
         info += ' [{0}]'.format(', '.join(matches))
         short_info += '*'

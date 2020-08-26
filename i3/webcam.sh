@@ -8,7 +8,7 @@ fi
 
 # resolució
 # llistar amb v4l2-ctl --list-formats-ext (v4l-utils)
-v4l2-ctl --set-fmt-video=width=640,height=480,pixelformat=YUYV
+#v4l2-ctl --set-fmt-video=width=640,height=480,pixelformat=YUYV
 
 # webcam
 mpv /dev/video0 -autofit=27% --geometry=-0-0 --demuxer-lavf-format=video4linux2

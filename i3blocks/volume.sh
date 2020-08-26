@@ -3,6 +3,10 @@
 # script per al volum sense utilitzar "amixer"
 # utilitza "pactl"
 
+case $BLOCK_BUTTON in
+    1) pactl set-sink-mute @DEFAULT_SINK@ toggle ;;
+esac
+
 # això mostra el volum actual
 function vol() {
 	pactl list sinks \

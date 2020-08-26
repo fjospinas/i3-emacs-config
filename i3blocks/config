@@ -27,13 +27,14 @@ color=#eeeeee
 [pacman-updates]
 command=/home/gerry/.config/i3blocks/pac-update.py
 markup=pango
-interval= 3600
+interval=3600
 QUIET=true
-WATCH=^linux.* ^pacman.*
+WATCH=^linux.* ^pacman.* ^emacs.*
 BASE_COLOR=#5fff5f
 UPDATE_COLOR=#FFFF85
 AUR=true
 LABEL= 
+signal=3
 
 [spotify]
 command=/home/gerry/.config/i3blocks/spotify.sh
